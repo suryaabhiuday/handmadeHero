@@ -1,4 +1,6 @@
 @echo off
 mkdir build 2>nul
-gcc src/main.c -o build\handmadeHero.exe
-build\handmadeHero.exe
+pushd build
+cl -Zi ../src/main.c user32.lib gdi32.lib
+popd
+build\main.exe
