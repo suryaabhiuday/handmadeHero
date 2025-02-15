@@ -1,5 +1,5 @@
 #include <windows.h>
-#include <stdio.h>
+
 LRESULT CALLBACK
 MainWindowCallback(HWND Window,
 		UINT Message,
@@ -34,7 +34,7 @@ MainWindowCallback(HWND Window,
 			int Y = Paint.rcPaint.top;
 			int Height = Paint.rcPaint.bottom - Paint.rcPaint.top;
 			int Width = Paint.rcPaint.right - Paint.rcPaint.left;
-			PatBlt(DeviceContext, X, Y, Width, Height, WHITENESS);
+			PatBlt(DeviceContext, X, Y, Width, Height, BLACKNESS);
 			EndPaint(Window, &Paint);
 		} break;
 		default:
